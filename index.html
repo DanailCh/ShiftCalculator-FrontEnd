@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="MainCalculator">
+      <!--calculirane na chasove-->
+      <form>
+        <!--TODO dobavqne na opciqta za ALL v Name-->
+        <div id="Name">
+          <label for="employeeName">Име на служител </label>
+          <input
+            type="text"
+            id="employeeName"
+            list="AllEmployees"
+            placeholder="Име Фамилия"
+            required
+          />
+          <datalist id="AllEmployees">
+            <!--tova sa placeholders za sega v posledstviq trqbva da dobavq actual people s JS ot database-a-->
+            <option value="Sachin Tendulkar"></option>
+            <option value="Brian Lara"></option>
+            <option value="Jacques Kallis"></option>
+            <option value="Ricky Ponting"></option>
+          </datalist>
+        </div>
+        <div id="MonthAndYear">
+          <label for="monthYear">Месец за изчисляване</label>
+          <input id="monthYear" type="month" name="bday-month" required />
+        </div>
+        <button id="CalcHoursBtn" type="submit">Изчисляване на часове</button>
+        <button id="FullReportBtn" type="submit">Пълен отчет</button>
+      </form>
+    </div>
+    <div id="AddEmployee">
+      <!--dobavqne na nov employee-->
+      <form>
+        <div id="FirstName">
+          <label for="firstName">Име</label>
+          <input id="firstName" type="text" name="firstName" required />
+        </div>
+        <div id="LastName">
+          <label for="lastName">Фамилия</label>
+          <input id="lastName" type="text" name="lastName" required />
+        </div>
+        <button id="AddEmployeeBtn" type="submit">Добавяне</button>
+      </form>
+    </div>
+  </body>
+</html>
